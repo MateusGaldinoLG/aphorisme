@@ -30,7 +30,7 @@ export class CreateUsers1625948100633 implements MigrationInterface {
                     },
                     {
                         name: "age",
-                        type: "timestamp"
+                        type: "int"
                     },
                     {
                         name: "pronoun",

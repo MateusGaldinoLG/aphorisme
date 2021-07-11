@@ -1,3 +1,6 @@
+import { hash } from "bcryptjs";
+import { getCustomRepository } from "typeorm";
+import { UserRepository } from "../repositories/UserRepository";
 
 interface IUserRequest{
     username: string;
@@ -5,10 +8,51 @@ interface IUserRequest{
     email: string;
     password: string;
     age: number;
-    pronoun: string;
+    //pronoun?: string;
+    //description: string;
 }
 
 class CreateUserService{
+
+    async execute({username, name = username, email, password, age}: IUserRequest){
+
+        const usersRepository = getCustomRepository(UserRepository);
+
+        if(!username){
+            throw new Error("Username must be defined")
+        }
+
+        if(!email){
+            throw new Error("Email must be defined")
+        }
+
+        const userAlreadyExists = await usersRepository.findOne({
+            email
+        })
+
+        if(userAlreadyExists){
+            throw new Error("User already exists");
+        }
+
+        if(age < 15){
+            throw new Error("User age too low")
+        }
+
+        const passwordHash = await hash(password, 8);
+
+        const user = usersRepository.create({
+            username,
+            email,
+            password: passwordHash,
+            name,
+            age
+        })
+
+        await usersRepository.save(user);
+
+        return user;
+
+    }
 
 }
 

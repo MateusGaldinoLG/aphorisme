@@ -15,10 +15,16 @@ class User{
     email: string;
 
     @Column()
+    password: string;
+
+    @Column()
     name: string
 
     @Column()
-    age: Date;
+    age: number;
+
+    @Column()
+    pronoun: string;
 
     @Column()
     description: string;
@@ -28,7 +34,7 @@ class User{
 
     constructor(){
         if(!this.id){
-            this.id == uuid();
+            this.id = uuid();
         }
     }
 
