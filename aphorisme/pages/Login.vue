@@ -8,13 +8,9 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'Index'
+  name: 'Login'
 })
 </script>
 
-<style>
-*{
-  padding: 0;
-  margin: 0;
-}
+<style scoped>
 </style>

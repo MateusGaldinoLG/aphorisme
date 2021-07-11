@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nav />
+    <sign-up-card />
   </div>
 </template>
 
@@ -8,13 +9,10 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'Index'
+  name: 'SignUp'
 })
 </script>
 
-<style>
-*{
-  padding: 0;
-  margin: 0;
-}
+<style scoped>
+
 </style>
