@@ -79,12 +79,16 @@ export default Vue.extend({
         })
         window.console.log(auth)
       } catch (err: any) {
-        if (err.response.status === 404) {
-          window.console.log('erro')
-          this.$router.push('/')
-        } else {
-          this.isWrong = true
+        if (JSON.stringify(err) !== '{}') {
+          if (err.response.status !== 404) {
+            window.console.log('erro')
+            this.isWrong = true
+          }
         }
+      }
+
+      if (!this.isWrong) {
+        this.$router.push('/')
       }
     },
     async logout () {

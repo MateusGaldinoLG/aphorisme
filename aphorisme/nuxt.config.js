@@ -30,7 +30,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build'
+    '@nuxt/typescript-build',
+    // for google fonts
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -61,10 +63,14 @@ export default {
           property: 'token',
           global: true
         },
+        user: {
+          property: false,
+          autoFetch: true
+        },
         endpoints: {
           login: { url: 'api/auth/login', method: 'post' },
           logout: { url: 'api/auth/logout', method: 'delete' },
-          user: { url: '/users/me', method: 'get' }
+          user: { url: '/user', method: 'get' }
         }
       }
     }

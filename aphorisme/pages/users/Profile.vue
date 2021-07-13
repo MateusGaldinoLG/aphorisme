@@ -1,7 +1,8 @@
 <template>
   <div>
     <Nav />
-    <p>{{ getIfToken }}</p>
+    <UserHero class="hero" :user="returnUser" />
+    <!-- <p>{{ getIfToken }}</p> -->
   </div>
 </template>
 
@@ -13,14 +14,19 @@ export default Vue.extend({
   computed: {
     getIfToken () {
       return this.$store.getters.isAuthenticated + ' - ' + JSON.stringify(this.$store.getters.loggedInUser) + '- ' + JSON.stringify(this.$auth.user)
+    },
+    returnUser () {
+      return this.$store.getters.loggedInUser
     }
   }
 })
 </script>
 
-<style>
-*{
-  padding: 0;
-  margin: 0;
-}
+<style scoped>
+/* .hero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} */
 </style>

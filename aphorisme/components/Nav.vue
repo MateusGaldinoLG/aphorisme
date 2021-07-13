@@ -4,15 +4,29 @@
       Aphorisme
     </NuxtLink>
     <div class="navSupport">
-      <NuxtLink to="/SignUp" class="nav-link">
+      <NuxtLink v-if="!isLoggedIn" to="/SignUp" class="nav-link">
         Sign-up
       </NuxtLink>
-      <NuxtLink to="/Login" class="nav-link">
+      <NuxtLink v-if="!isLoggedIn" to="/Login" class="nav-link">
         Login
+      </NuxtLink>
+      <NuxtLink v-if="isLoggedIn" to="users/Profile" class="nav-link">
+        Profile
       </NuxtLink>
     </div>
   </nav>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data () {
+    return {
+      isLoggedIn: this.$store.getters.isAuthenticated
+    }
+  }
+})
+</script>
 
 <style lang="scss" scoped>
 nav{
