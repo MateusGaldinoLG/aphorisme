@@ -30,8 +30,16 @@ class CreateUserService{
             email
         })
 
+        const userNameAlreadyTaken = await usersRepository.findOne({
+            username
+        })
+
         if(userAlreadyExists){
             throw new Error("User already exists");
+        }
+
+        if(userNameAlreadyTaken){
+            throw new Error("UserName already taken")
         }
 
         if(age < 15){
