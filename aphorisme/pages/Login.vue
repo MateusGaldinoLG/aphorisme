@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nav />
+    <LoginCard />
   </div>
 </template>
 

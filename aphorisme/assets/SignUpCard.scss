@@ -1,0 +1,73 @@
+.LoginCard, .SignupCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  border: 2px solid gray;
+  margin: 5px;
+  padding: 15px;
+}
+
+/*Form container*/
+.auth-container{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+}
+h2{
+    margin: 10px;
+    text-align: center;
+}
+label{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.5em 0;
+}
+input{
+  border: none;
+  border-bottom: 1px solid gray;
+
+  &:focus{
+    outline: none !important;
+  }
+}
+
+.auth-item{
+  display: flex;
+  flex-direction: column;
+  p{
+    font-size: 0.80rem;
+    color: rgb(84, 82, 82);
+    padding: 2px;
+  }
+}
+
+p.error-message{
+  background-color: rgb(238, 77, 77);
+  color: white;
+  text-align:center;
+  margin: 1px;
+}
+/*Button container*/
+.button-container{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+.cancel{
+    background-color: #f44336;
+}

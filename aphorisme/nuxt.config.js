@@ -36,11 +36,39 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:3030'
+  },
+
+  auth: {
+    localStorage: {
+      prefix: 'auth'
+    },
+    // cookie: {
+    //   options: {
+    //     expires: 7
+    //   }
+    // },
+    // Nuxt-auth configuration
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          global: true
+        },
+        endpoints: {
+          login: { url: 'api/auth/login', method: 'post' },
+          logout: { url: 'api/auth/logout', method: 'delete' },
+          user: { url: '/users/me', method: 'get' }
+        }
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

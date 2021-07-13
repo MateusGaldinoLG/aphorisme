@@ -14,27 +14,33 @@
   </nav>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 nav{
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 5px;
 }
-.nav-link, .header{
+.nav-link{
     display: inline-block;
-    padding: 10px;
+    padding: 4px;
     margin: 0 2vw;
     text-decoration: none;
     color: white;
     text-align: center;
     font-size: 1.25rem;
-}
-.nav-link:hover{
-  color: #c5c2c2;
+  &:hover{
+    color: #c5c2c2;
+  }
 }
 .header{
+  display: inline-block;
+  padding: 4px;
+  margin: 0 2vw;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
   font-size: 3rem;
   margin-right: auto;
 }
