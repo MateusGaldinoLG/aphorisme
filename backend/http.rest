@@ -1,3 +1,4 @@
+# sign-up
 POST http://localhost:3030/users HTTP/1.1
 Content-Type: application/json
 
@@ -6,4 +7,15 @@ Content-Type: application/json
     "email": "mateus2@teste.com",
     "password": "12345",
     "age": 18
+}
+
+###
+#sign-in
+
+POST http://localhost:3030/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "mateus2@teste.com",
+    "password": "12345"
 }
