@@ -49,7 +49,7 @@
         <button>
           Sign-up
         </button>
-        <button class="cancel">
+        <button class="cancel" @click="cancelSignUp">
           Cancel
         </button>
       </div>
@@ -103,6 +103,9 @@ export default Vue.extend({
       //   age: calculateAge(createDate(this.day, this.month, this.year, this.meses)),
       //   date: createDate(this.day, this.month, this.year, this.meses)
       // })
+    },
+    cancelSignUp () {
+      this.$router.push('/')
     }
   }
 })

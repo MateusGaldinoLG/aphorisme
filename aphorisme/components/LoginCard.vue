@@ -40,12 +40,12 @@
         </div>
       </div> <!--Auth container-->
       <div class="button-container">
-        <button>
+        <button class="login-button">
           Login
         </button>
-        <button @click="logout">
+        <!-- <button @click="logout">
           Logout
-        </button>
+        </button> -->
       </div>
     </form>
   </div>
@@ -91,9 +91,9 @@ export default Vue.extend({
         this.$router.push('/')
       }
     },
-    async logout () {
-      await this.$auth.logout()
-    },
+    // async logout () {
+    //   await this.$auth.logout()
+    // },
     checkLoginData () {
       if (!this.email.includes('@')) {
         this.falseEmail = true

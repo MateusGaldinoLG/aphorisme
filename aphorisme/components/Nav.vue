@@ -30,7 +30,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 nav{
-  background-color: rgb(64, 17, 112);
+  background-color: hsl(270, 74%, 25%);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -45,7 +45,7 @@ nav{
     text-align: center;
     font-size: 1.25rem;
   &:hover{
-    color: #c5c2c2;
+    color: hsl(270, 74%, 85%);
   }
 }
 .header{

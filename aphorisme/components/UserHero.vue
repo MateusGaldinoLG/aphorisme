@@ -1,21 +1,31 @@
 <template>
-  <div class="UserHero">
-    <h2>{{ user.name }}</h2>
-    <img src="~/assets/icons/edit.svg" alt="edit user details">
-    <p class="user-name">
-      {{ user.username }}
-    </p>
-    <div class="description">
-      <h3>Bio and Details:</h3>
-      <img src="~/assets/icons/edit.svg" alt="edit user details">
-      <p>{{ user.description }}</p>
-    </div>
-    <div class="pronouns">
-      <h4>Pronouns:</h4>
-      <img src="~/assets/icons/edit.svg" alt="edit user details">
-      <p>{{ user.pronoun }}</p>
-    </div>
+  <!-- <img src="~/assets/icons/edit.svg" alt="edit user details"> -->
+  <div class="user-hero">
+    <div class="card" style="width: 30rem">
+      <div class="card-body">
+        <div class="user">
+          <div>
+            <h4 class="card-title">
+              {{ user.name }}
+            </h4>
+            <h5 class="card-subtitle mb-2 text-muted">
+              {{ user.username }}
+            </h5>
+          </div>
+          <img v-if="isEditable" src="~/assets/icons/edit.svg" alt="edit user details">
+        </div>
+        <div>
+          <h6>Bio and Details:</h6>
+          <p class="card-text">
+            {{ user.description }}
+          </p>
+        </div>
+        <p class="card-text">
+          Pronouns: {{ user.pronoun }}
+        </p>
+      </div>
     <!-- <p>Age: {{ user.age }}</p> -->
+    </div>
   </div>
 </template>
 
@@ -28,27 +38,19 @@ export default Vue.extend({
       type: Object,
       required: true
     }
+  },
+  computed: {
+    isEditable () {
+      return this.$store.getters.isAuthenticated && this.user === this.$store.getters.loggedInUser
+    }
   }
 })
 </script>
 
 <style lang="scss">
-.UserHero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #eee;
-    margin: 10px;
-    box-shadow: 1px 1px 0 gray;
+.user{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-h2{
-    font-size: 1.35rem;
-    padding: 2px;
-    font-weight: 600;
-}
-.user-name{
-    color: #646060;
-}
-
 </style>
