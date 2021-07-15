@@ -6,7 +6,8 @@ Content-Type: application/json
     "username": "Mateus Galdino",
     "email": "mateus2@teste.com",
     "password": "12345",
-    "age": 18
+    "age": 18,
+    "dateOfBirth": "2002-11-29"
 }
 
 ###
@@ -18,7 +19,8 @@ Content-Type: application/json
     "username": "Tester tes",
     "email": "test@testing.com",
     "password": "12345",
-    "age": 31
+    "age": 31,
+    "dateOfBirth": "1990-5-13"
 }
 
 ###
@@ -36,15 +38,21 @@ Content-Type: application/json
 # Token testing
 
 GET http://localhost:3030/api/auth/user HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2MTgwOTU3LCJleHAiOjE2MjYyNjczNTcsInN1YiI6IjdkMzAyODA1LTg1NTctNDc1ZS1hYTljLTE3OGJkMGNiODQzYyJ9.tuK0dl2Xp_BIR0VeKTe442-WIcPry8rPCmb1Xhbg7aQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk
 
 ###
 # Update description
 
 PUT http://localhost:3030/api/users/description HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2MTgwOTU3LCJleHAiOjE2MjYyNjczNTcsInN1YiI6IjdkMzAyODA1LTg1NTctNDc1ZS1hYTljLTE3OGJkMGNiODQzYyJ9.tuK0dl2Xp_BIR0VeKTe442-WIcPry8rPCmb1Xhbg7aQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk
 
 {
     "description": "I am a programmer from Brasil"
 }
+
+###
+# Get user by username
+GET http://localhost:3030/user/mateus-Galdino HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk

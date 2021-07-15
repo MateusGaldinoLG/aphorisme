@@ -18,6 +18,11 @@ app.use(router);
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction)=>{
     if(err instanceof Error){
+        if(err.message.includes("not found")){
+            return response.status(404).json({
+                error: err.message
+            })
+        }
         return response.status(400).json({
             error: err.message
         })

@@ -8,13 +8,14 @@ interface IUserRequest{
     email: string;
     password: string;
     age: number;
+    dateOfBirth: Date;
     //pronoun?: string;
     //description: string;
 }
 
 class CreateUserService{
 
-    async execute({username, name = username, email, password, age}: IUserRequest){
+    async execute({username, name = username, email, password, age, dateOfBirth}: IUserRequest){
 
         const usersRepository = getCustomRepository(UserRepository);
 
@@ -53,7 +54,8 @@ class CreateUserService{
             email,
             password: passwordHash,
             name,
-            age
+            age,
+            dob: dateOfBirth
         })
 
         await usersRepository.save(user);

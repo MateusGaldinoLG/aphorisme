@@ -26,6 +26,9 @@ class User{
     age: number;
 
     @Column()
+    dob: Date;
+
+    @Column()
     pronoun: string;
 
     @Column()

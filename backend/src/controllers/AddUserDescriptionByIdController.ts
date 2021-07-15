@@ -6,7 +6,7 @@ class AddUserDescriptionByIdController{
 
     async handle(req: Request, res: Response){
         const {description} = req.body;
-        console.log(description);
+        //console.log(description);
         //console.log(req)
 
         const addUserDescriptionByIdService = new AddUserDescriptionByIdService();
@@ -16,7 +16,7 @@ class AddUserDescriptionByIdController{
 
         const result = await addUserDescriptionByIdService.execute({id: user_id, description})
 
-        console.log(result)
+        //console.log(result)
 
         return res.json(result);
     }
