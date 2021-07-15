@@ -44,6 +44,33 @@ input{
     padding: 2px;
   }
 }
+.auth-date-item{
+  display: flex;
+  flex-direction: row;
+  .date-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    label{
+      margin:0 7px;
+    }
+    input{
+      width: 50px;
+      margin-right: 4px;
+      padding: 2px;
+      font-size: 17px;
+    }
+    select{
+      text-align: center;
+      font-size: 17px;
+      padding: 5px;
+      margin: 0 7px;
+      option{
+  
+      }
+    }
+  }
+}
 
 p.error-message{
   background-color: rgb(238, 77, 77);

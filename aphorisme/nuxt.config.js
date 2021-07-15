@@ -76,6 +76,14 @@ export default {
     }
   },
 
+  // google-fonts module configuration
+  googleFonts: {
+    families: {
+      Merriweather: true
+    },
+    useStylesheet: true
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

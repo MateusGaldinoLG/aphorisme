@@ -30,10 +30,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 nav{
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(64, 17, 112);
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-family: 'Merriweather', Arial, Helvetica, sans-serif;;
 }
 .nav-link{
     display: inline-block;

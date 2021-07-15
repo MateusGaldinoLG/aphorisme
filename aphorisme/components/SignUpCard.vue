@@ -17,15 +17,32 @@
           <p>Passwords must have at least 8 characters, with numbers and letters</p>
         </div>
         <div class="auth-item">
-          <label>Age</label>
-          <input
-            v-model="age"
-            type="text"
-            placeholder="Enter your age here"
-            name="age"
-            min="15"
-            required
-          >
+          <label>Date of Birth</label>
+          <div class="auth-date-item">
+            <div class="date-item">
+              <label>Day</label>
+              <input v-model="day" type="text" placeholder="dd">
+            </div>
+            <div class="date-item">
+              <label>Month</label>
+              <select id="month" v-model="month" name="month">
+                <option disabled value>
+                  ...
+                </option>
+                <option v-for="mes in meses" :key="mes" :value="mes">
+                  {{ mes }}
+                </option>
+              </select>
+            </div>
+            <div class="date-item">
+              <label>Year</label>
+              <select id="year" v-model="year" name="year">
+                <option v-for="i in (2006 + 1 - 1940)" :key="i" :value="2007 - i">
+                  {{ 2007 - i }}
+                </option>
+              </select>
+            </div>
+          </div>
         </div> <!--auth item-->
       </div> <!--Auth container-->
       <div class="button-container">
@@ -45,33 +62,31 @@
 
 <script setup lang="ts">
 import Vue from 'vue'
-
-// interface ILoginInformations{
-//     username: string;
-//     email: string;
-//     password: string;
-//     age: number;
-// }
+import { calculateAge, createDate } from '../assets/util/dateFunctions'
 
 export default Vue.extend({
   data () {
     return {
+      meses: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember'],
       username: null,
       email: null,
       password: null,
-      age: '',
+      day: '',
+      month: '',
+      year: '',
       isWrong: false,
       errorMessage: ''
     }
   },
   methods: {
     async createUser () {
-      const ip = await this.$axios.$post('http://localhost:3030/users',
+      await this.$axios.$post('/users',
         {
           username: this.username,
           email: this.email,
           password: this.password,
-          age: parseInt(this.age)
+          age: calculateAge(createDate(this.day, this.month, this.year, this.meses)),
+          dateOfBirth: createDate(this.day, this.month, this.year, this.meses)
         })
         .then((res: object) => {
           window.console.log(res)
@@ -81,7 +96,13 @@ export default Vue.extend({
           this.isWrong = true
           this.errorMessage = error.response.data.error // change this later
         })
-      window.console.log(ip)
+      // window.console.log({
+      //   username: this.username,
+      //   email: this.email,
+      //   password: this.password,
+      //   age: calculateAge(createDate(this.day, this.month, this.year, this.meses)),
+      //   date: createDate(this.day, this.month, this.year, this.meses)
+      // })
     }
   }
 })

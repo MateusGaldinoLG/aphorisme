@@ -1,13 +1,18 @@
 <template>
   <div class="UserHero">
-    <h2>{{ user.username }}</h2>
-    <p class="user-name">{{ user.name }}</p>
+    <h2>{{ user.name }}</h2>
+    <img src="~/assets/icons/edit.svg" alt="edit user details">
+    <p class="user-name">
+      {{ user.username }}
+    </p>
     <div class="description">
       <h3>Bio and Details:</h3>
+      <img src="~/assets/icons/edit.svg" alt="edit user details">
       <p>{{ user.description }}</p>
     </div>
     <div class="pronouns">
       <h4>Pronouns:</h4>
+      <img src="~/assets/icons/edit.svg" alt="edit user details">
       <p>{{ user.pronoun }}</p>
     </div>
     <!-- <p>Age: {{ user.age }}</p> -->
@@ -33,9 +38,9 @@ export default Vue.extend({
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(150, 150, 230, 0.90);
+    background-color: #eee;
     margin: 10px;
-    box-shadow: 1px 0 0 gray;
+    box-shadow: 1px 1px 0 gray;
 }
 h2{
     font-size: 1.35rem;
