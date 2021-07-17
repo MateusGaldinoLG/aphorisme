@@ -5,12 +5,14 @@ import { CreateUserController } from "./controllers/CreateUserController";
 import { GetUserByUserNameController } from "./controllers/GetUserByUserNameController";
 import { GetUserDetailController } from "./controllers/GetUserDetailController";
 import { ensureAuthenticated } from "./middlewares/ensureAuthenticated";
+import { UpdateUserDetailsController } from "./controllers/UpdateUserDetailsController";
 
 const addUserDescriptionByIdController = new AddUserDescriptionByIdController();
 const authenticateUserController = new AuthenticateUserController();
 const createUserController = new CreateUserController();
 const getUserByUserNameController = new GetUserByUserNameController();
 const getUserDetailController = new GetUserDetailController();
+const updateUserDetailsController = new UpdateUserDetailsController();
 
 const router = Router();
 
@@ -26,6 +28,7 @@ router.get('/user/:username', ensureAuthenticated, getUserByUserNameController.h
 
 router.post('/users', createUserController.handle);
 router.put('/api/users/description', ensureAuthenticated, addUserDescriptionByIdController.handle)
+router.put('/api/users/edit', ensureAuthenticated, updateUserDetailsController.handle)
 
 router.post(`${baseAuthRoute}/login`, authenticateUserController.handle);
 

@@ -38,14 +38,14 @@ Content-Type: application/json
 # Token testing
 
 GET http://localhost:3030/api/auth/user HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2NTM0Mjk5LCJleHAiOjE2MjY2MjA2OTksInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.GS4dWtUquWD8-GN169iHYAE8R5EG-pw2xxPfHaCGZ3I
 
 ###
 # Update description
 
 PUT http://localhost:3030/api/users/description HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2NTM0Mjk5LCJleHAiOjE2MjY2MjA2OTksInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.GS4dWtUquWD8-GN169iHYAE8R5EG-pw2xxPfHaCGZ3I
 
 {
     "description": "I am a programmer from Brasil"
@@ -55,4 +55,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 # Get user by username
 GET http://localhost:3030/user/mateus-Galdino HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Mjg2MDYzLCJleHAiOjE2MjYzNzI0NjMsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.JllPE3cjXSknrr9UbhyPCiDICjTdYwnCnOkBPXD_3Yk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2NTM0Mjk5LCJleHAiOjE2MjY2MjA2OTksInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.GS4dWtUquWD8-GN169iHYAE8R5EG-pw2xxPfHaCGZ3I
+
+###
+# Update user details
+
+PUT http://localhost:3030/api/users/edit HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2NTM0Mjk5LCJleHAiOjE2MjY2MjA2OTksInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.GS4dWtUquWD8-GN169iHYAE8R5EG-pw2xxPfHaCGZ3I
+
+{
+    "name": "mateusg",
+    "description": "I am a programmer from Brasil",
+    "pronoun": "he/him"
+}
