@@ -1,0 +1,47 @@
+/// Main aphorisme colors
+///
+///  dark purple is used in the nav
+///  light-blue is used in buttons and other styles
+///  red is used to cancel and other "danger" properties
+///
+$dark-purple-100: hsl(270, 74%, 10%);
+$dark-purple-250: hsl(270, 74%, 25%);
+$dark-purple-500: hsl(270, 74%, 50%);
+$dark-purple-750: hsl(270, 74%, 75%);
+$dark-purple-hover: hsl(270, 74%, 85%);
+
+$light-blue-100: hsla(237, 94%, 54%, 10%);
+$light-blue-250: hsla(237, 94%, 54%, 25%);
+$light-blue-500: hsla(237, 94%, 54%, 50%);
+$light-blue-750: hsla(237, 94%, 54%, 75%);
+$button-blue: hsla(237, 94%, 54%, 0.755);
+$light-blue-900: hsla(237, 94%, 54%, 90%);
+
+$red-100: hsl(4, 90%, 10%);
+$red-250: hsl(4, 90%, 25%);
+$red-500: hsl(4, 90%, 50%);
+$red-750: hsl(4, 90%, 75%);
+$red-900: hsl(4, 90%, 90%);
+$cancel-red: hsl(4, 90%, 58%);
+
+$green-100: hsl(140, 54%, 10%);
+$green-250: hsl(140, 54%, 25%);
+$green-500: hsl(140, 54%, 50%);
+$green-750: hsl(140, 54%, 75%);
+$green-900: hsl(140, 54%, 90%);
+
+/// font-size properties
+$fs-sub: 0.75rem;
+$fs-base: 1rem;
+$fs-large: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 1.9rem;
+$fs-3xl: 2.25rem;
+$fs-4xl: 3rem;
+$fs-5xl: 3.75rem;
+$fs-6xl: 4.5rem;
+$fs-7xl: 6rem;
+$fs-8xl: 8rem;
+
+/// padding properties
+$p-1: 0.25rem;

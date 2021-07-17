@@ -1,3 +1,5 @@
+@import "../utilities/main";
+
 .LoginCard, .SignupCard{
   display: flex;
   justify-content: center;
@@ -23,9 +25,9 @@ h2{
     text-align: center;
 }
 label{
-    font-size: 1.25rem;
+    font-size: $fs-large;
     font-weight: 500;
-    padding: 0.5em 0;
+    padding: 0.5rem 0;
 }
 input{
   border: none;
@@ -40,7 +42,7 @@ input{
   display: flex;
   flex-direction: column;
   p{
-    font-size: 0.80rem;
+    font-size: $fs-sub;
     color: rgb(84, 82, 82);
     padding: 2px;
   }
@@ -62,11 +64,12 @@ input{
       width: 50px;
       margin-right: 4px;
       padding: 2px;
-      font-size: 17px;
+      font-size: $fs-base;
     }
     select{
+      background-color: rgb(249, 249, 249);
       text-align: center;
-      font-size: 17px;
+      font-size: $fs-base;
       padding: 5px;
       margin: 0 7px;
       border-radius: 5px;
@@ -86,10 +89,10 @@ p.error-message{
   display: flex;
   justify-content: flex-end;
   button{
-      background-color: hsla(237, 94%, 54%, 0.755);
+      background-color: $button-blue;
       color: white;
       padding: 14px 20px;
-      margin: 8px;
+      margin: 9px;
       border: none;
       cursor: pointer;
       border-radius: 12px;
@@ -97,9 +100,9 @@ p.error-message{
       opacity: 0.9;
     }
     &.cancel{
-      border: 1px solid rgb(244, 67, 54);
+      border: 1px solid $cancel-red;
       background-color: white;
-      color:rgb(244, 67, 54);
+      color: $red-500;
     }
     &.login-button{
       width: 100%;

@@ -112,6 +112,6 @@ export default Vue.extend({
 })
 </script>
 
-<style src="~/assets/SignUpCard.scss" lang="scss">
+<style src="~/assets/scss/components/SignUpCard.scss" lang="scss">
 
 </style>

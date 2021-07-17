@@ -1,5 +1,8 @@
 <template>
-  <UserHero :user="user" />
+  <div>
+    <Nav />
+    <UserHero :user="user" />
+  </div>
 </template>
 
 <script lang="ts">

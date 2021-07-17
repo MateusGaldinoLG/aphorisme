@@ -20,6 +20,10 @@ export default {
   css: [
   ],
 
+  // server: {
+  //   host: '0.0.0.0'
+  // },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/bootstrap-vue'
@@ -33,7 +37,9 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // for google fonts
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    // for global scss variables
+    '@nuxtjs/style-resources'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -83,6 +89,13 @@ export default {
       Merriweather: true
     },
     useStylesheet: true
+  },
+
+  // scss variables module configuration
+  styleResources: {
+    scss: [
+      './assets/scss/utilities/main.scss'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 import Vue from 'vue'
-import { calculateAge, createDate } from '../assets/util/dateFunctions'
+import { calculateAge, createDate } from '../assets/ts/dateFunctions'
 
 export default Vue.extend({
   data () {
@@ -111,6 +111,6 @@ export default Vue.extend({
 })
 </script>
 
-<style src="~/assets/SignUpCard.scss" lang="scss" scoped>
+<style src="~/assets/scss/components/SignUpCard.scss" lang="scss" scoped>
 
 </style>

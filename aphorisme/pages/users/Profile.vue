@@ -1,8 +1,8 @@
 <template>
   <div>
     <Nav />
-    <UserHero class="hero" :user="returnUser" />
-    <!-- <p>{{ getIfToken }}</p> -->
+    <UserHero class="hero" :user="returnUser" @edit="setEditable" />
+    <EditUser v-if="editable" :user="returnUser" @edit="setEditable" />
   </div>
 </template>
 
@@ -11,12 +11,24 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Index',
+  data () {
+    return {
+      editable: false
+    }
+  },
   computed: {
     getIfToken () {
       return this.$store.getters.isAuthenticated + ' - ' + JSON.stringify(this.$store.getters.loggedInUser) + '- ' + JSON.stringify(this.$auth.user)
     },
     returnUser () {
       return this.$store.getters.loggedInUser
+    }
+  },
+  methods: {
+    setEditable () {
+      window.console.log('emitted')
+      if (this.editable === false) { this.editable = true }
+      else { this.editable = false }
     }
   }
 })

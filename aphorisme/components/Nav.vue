@@ -10,7 +10,7 @@
       <NuxtLink v-if="!isLoggedIn" to="/Login" class="nav-link">
         Login
       </NuxtLink>
-      <NuxtLink v-if="isLoggedIn" to="users/Profile" class="nav-link">
+      <NuxtLink v-if="isLoggedIn" to="/users/Profile" class="nav-link">
         Profile
       </NuxtLink>
     </div>
@@ -30,33 +30,33 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 nav{
-  background-color: hsl(270, 74%, 25%);
+  background-color: $dark-purple-250;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-family: 'Merriweather', Arial, Helvetica, sans-serif;;
+  font-family: 'Merriweather', 'Helvetica neue', Arial, Helvetica, sans-serif;
+  width: 100vw;
 }
 .nav-link{
     display: inline-block;
-    padding: 4px;
+    padding: $p-1;
     margin: 0 2vw;
     text-decoration: none;
     color: white;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: $fs-large;
   &:hover{
-    color: hsl(270, 74%, 85%);
+    color: $dark-purple-hover;
   }
 }
 .header{
   display: inline-block;
-  padding: 4px;
+  padding: $p-1;
   margin: 0 2vw;
   text-decoration: none;
   color: white;
   text-align: center;
-  font-size: 1.25rem;
-  font-size: 3rem;
+  font-size: $fs-4xl;
   margin-right: auto;
 }
 @media (max-width: 500px){
@@ -65,7 +65,7 @@ nav{
   }
   .nav-link, .header{
     margin: 0;
-    padding: 3px;
+    padding: $p-1;
     display: block;
   }
 }
