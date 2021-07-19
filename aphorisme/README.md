@@ -1,5 +1,7 @@
 # aphorisme
 
+This is the front end directory for all front-end related files.
+
 ## Build Setup
 
 ```bash
