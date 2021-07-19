@@ -1,39 +1,36 @@
 <template>
-  <div class="user-hero">
-    <div class="card">
-      <div class="commands">
-        <button class="cancel" @click="cancel">
-          X
-        </button>
-        <button @click="edit">
-          Edit
-        </button>
+  <b-modal v-model="isEditable" centered>
+    <template #modal-header>
+      <b-button size="sm" variant="outline-danger" @click="cancel">
+        X
+      </b-button>
+      <h5>Edit user</h5>
+    </template>
+    <form ref="form">
+      <h4>
+        User Name
+      </h4>
+      <input v-model="name" type="text">
+      <div>
+        <h6>Bio and Details:</h6>
+        <textarea id="description" v-model="description" name="description" cols="30" rows="10" />
       </div>
-      <div class="card-body">
-        <div class="user">
-          <div>
-            <h4 class="card-title">
-              User Name
-            </h4>
-            <input v-model="name" type="text">
-            <h5 class="card-subtitle mb-2 text-muted">
-              {{ user.username }}
-            </h5>
-          </div>
-        </div>
-        <div>
-          <h6>Bio and Details:</h6>
-          <textarea id="description" v-model="description" name="description" cols="30" rows="10" />
-        </div>
-        <div class="details">
-          <p class="card-text">
-            Pronouns:
-            <input v-model="pronoun" type="text">
-          </p>
-        </div>
+      <div class="details">
+        <p class="card-text">
+          Pronouns:
+          <input v-model="pronoun" type="text">
+        </p>
       </div>
-    </div>
-  </div>
+    </form>
+    <template #modal-footer>
+      <b-button size="sm" variant="primary" @click="edit">
+        Edit
+      </b-button>
+      <b-button size="sm" variant="danger" @click="cancel()">
+        Cancel
+      </b-button>
+    </template>
+  </b-modal>
 </template>
 
 <script lang="ts">
@@ -44,13 +41,18 @@ export default Vue.extend({
     user: {
       type: Object,
       required: true
+    },
+    editable: {
+      type: Boolean,
+      required: true
     }
   },
   data () {
     return {
       name: this.user.name,
       description: this.user.description,
-      pronoun: this.user.pronoun
+      pronoun: this.user.pronoun,
+      isEditable: this.editable
     }
   },
   methods: {
@@ -117,14 +119,13 @@ export default Vue.extend({
 .card{
   width: 600px;
 }
-.user, .details{
-  input{
-    text-align: center;
-    margin: 0.75rem;
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-  }
+
+input{
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
+
 .details{
   display: flex;
   flex-direction: row;
@@ -138,6 +139,7 @@ img{
 textarea{
   padding: 0.5rem;
   height: 5rem;
+  width: 100%;
   resize: none;
   border-radius: 0.5rem;
 }

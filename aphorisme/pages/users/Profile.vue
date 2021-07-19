@@ -2,7 +2,7 @@
   <div>
     <Nav />
     <UserHero class="hero" :user="returnUser" @edit="setEditable" />
-    <EditUser v-if="editable" :user="returnUser" @edit="setEditable" />
+    <EditUserModal v-if="editable" :user="returnUser" @edit="setEditable" />
   </div>
 </template>
 

@@ -51,7 +51,8 @@ export default Vue.extend({
       'loggedInUser'
     ]),
     isEditable () {
-      return this.$store.getters.isAuthenticated && this.user === this.$store.getters.loggedInUser
+      // return this.$store.getters.isAuthenticated && this.user === this.$store.getters.loggedInUser
+      return true
     }
   },
   methods: {
