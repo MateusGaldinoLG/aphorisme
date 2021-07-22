@@ -1,6 +1,7 @@
 <template>
   <div>
     <Nav />
+    <HomeBody />
     <p>{{ getIfToken }}</p>
   </div>
 </template>
@@ -12,7 +13,7 @@ export default Vue.extend({
   name: 'Index',
   computed: {
     getIfToken () {
-      return this.$store.getters.isAuthenticated + ' - ' + JSON.stringify(this.$store.getters.loggedInUser) + '- ' + JSON.stringify(this.$auth.user)
+      return this.$store.getters.isAuthenticated + ' - ' + JSON.stringify(this.$store.getters.loggedInUser) + '- ' + JSON.stringify(this.$auth.user) + '-' + JSON.stringify(this.$store.getters.getUserName)
     }
   }
 })

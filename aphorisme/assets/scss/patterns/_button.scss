@@ -1,0 +1,25 @@
+button{
+    background-color: $button-blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 9px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+  &:hover{
+    opacity: 0.9;
+  }
+  &.cancel{
+    border: 1px solid $cancel-red;
+    background-color: white;
+    color: $red-500;
+  }
+  &.login-button{
+    width: 100%;
+    border-radius: 16px;
+  }
+  &.accept{
+    width: 100%;
+    border-radius: 16px;
+  }
+}

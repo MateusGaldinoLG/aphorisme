@@ -3,6 +3,7 @@
     <Nav />
     <UserHero class="hero" :user="returnUser" @edit="setEditable" />
     <EditUserModal v-if="editable" :user="returnUser" @edit="setEditable" />
+    <Aphorisme-UserAphorisms :is-profile="true" />
   </div>
 </template>
 

@@ -38,5 +38,8 @@ export const getters = {
   },
   loggedInUser (state: any) {
     return state.auth.user
+  },
+  getUserName (state: any) {
+    return state.auth.user.username
   }
 }

@@ -3,6 +3,7 @@
     <Nav />
     <UserHero v-if="wasFound" :user="user" />
     <UserNotFound v-else :username="username" />
+    <Aphorisme-UserAphorisms :is-profile="false" />
   </div>
 </template>
 
