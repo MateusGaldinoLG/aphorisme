@@ -38,7 +38,7 @@ Content-Type: application/json
 # Token testing
 
 GET http://localhost:3030/api/auth/user HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2NTM0Mjk5LCJleHAiOjE2MjY2MjA2OTksInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.GS4dWtUquWD8-GN169iHYAE8R5EG-pw2xxPfHaCGZ3I
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Nzg4ODkwLCJleHAiOjE2MjY4NzUyOTAsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.n97xrJsbD95szlJI-c_flt4miP6jEzhXkvQh5ARY0xc
 
 ###
 # Update description

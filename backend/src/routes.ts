@@ -18,10 +18,6 @@ const router = Router();
 
 const baseAuthRoute = '/api/auth';
 
-router.get('/users', (req, res)=>{
-    return res.send("hello world");
-})
-
 router.get(`${baseAuthRoute}/user`, ensureAuthenticated, getUserDetailController.handle)
 router.get(`/user`, ensureAuthenticated, getUserDetailController.handle)
 router.get('/user/:username', ensureAuthenticated, getUserByUserNameController.handle)

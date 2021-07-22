@@ -9,8 +9,6 @@ interface IUserRequest{
     password: string;
     age: number;
     dateOfBirth: Date;
-    //pronoun?: string;
-    //description: string;
 }
 
 class CreateUserService{
