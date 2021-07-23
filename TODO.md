@@ -7,7 +7,7 @@ Aphorism frontend
 [x] Criar POST no WriteAphorism
 [x] Criar GET no UserAphorisms
 [x] Criar PUT no Botão de Like no Aphorism
-[] Criar DELETE no delete do Dropdown
+[x] Criar DELETE no delete do Dropdown
 
 [x] Desenvolver condicional do delete para usuário logado e usuário no Local
 [x] Desenvolver condicional do write para usuário logado e somente no perfil
