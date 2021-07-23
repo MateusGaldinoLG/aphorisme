@@ -40,6 +40,10 @@ export const getters = {
     return state.auth.user
   },
   getUserName (state: any) {
-    return state.auth.user.username
+    if (state.auth.user === null) {
+      return null
+    } else {
+      return state.auth.user.username
+    }
   }
 }

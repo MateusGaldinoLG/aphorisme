@@ -1,6 +1,6 @@
 <template>
   <div class="aphorism">
-    <Aphorisme-WriteAphorism />
+    <Aphorisme-WriteAphorism v-if="isProfile" />
     <Aphorisme-Aphorism v-for="aphorism in aphorisms" :key="aphorism.id" :aphorism="aphorism" :user="user" />
   </div>
 </template>

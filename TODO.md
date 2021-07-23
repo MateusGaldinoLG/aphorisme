@@ -9,5 +9,5 @@ Aphorism frontend
 [x] Criar PUT no Botão de Like no Aphorism
 [] Criar DELETE no delete do Dropdown
 
-[] Desenvolver condicional do delete para usuário logado e usuário no Local
-[] Desenvolver condicional do write para usuário logado e somente no perfil
+[x] Desenvolver condicional do delete para usuário logado e usuário no Local
+[x] Desenvolver condicional do write para usuário logado e somente no perfil
