@@ -8,6 +8,18 @@
 Aphorisme is a social network based on aphorisms, a short length style of text used in areas such as philosophy and literature. Every user can publish their own aphorism and rate on the aphorisms of others.  
 This is a side project and can be used locally but is not production ready
 
+## Technologies used
+
+As a fullstack project, many technologies were used, namely:
+
+* Front end:
+
+Nuxt - Vue - Bootstrap Vue - sass
+
+* Back end:
+
+Express - Typescript - Typeorm - Postgres
+
 ## How to run
 
 To run this program, you need to have Node.js and NPM.  
