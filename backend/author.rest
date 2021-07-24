@@ -1,0 +1,50 @@
+# Create author that already died
+POST http://localhost:3030/author HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+
+{
+    "name": "Friedrich Nietzsche",
+    "bio": "German philosopher",
+    "born_at": "1844-10-15",
+    "died_at": "1900-08-25"
+}
+
+###
+
+POST http://localhost:3030/author HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+
+{
+    "name": "Sigmund Freud",
+    "bio": "German psychoanalyst",
+    "born_at": "1856-05-06",
+    "died_at": "1939-09-23"
+}
+
+###
+# Create living author
+
+POST http://localhost:3030/author HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+
+{
+    "name": "Slavoj Zizek",
+    "bio": "Slovene Philosopher born in Yugoslavia",
+    "born_at": "1949-03-21"
+}
+
+###
+# create author without bio
+
+POST http://localhost:3030/author HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+
+{
+    "name": "Sis",
+    "born_at": "1111-11-11"
+}
+
