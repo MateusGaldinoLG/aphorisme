@@ -3,6 +3,9 @@
     <NuxtLink to="/" class="header">
       Aphorisme
     </NuxtLink>
+    <!-- <div> -->
+      <SearchBar />
+    <!-- </div> -->
     <div class="navSupport">
       <NuxtLink v-if="!isLoggedIn" to="/SignUp" class="nav-link">
         Sign-up

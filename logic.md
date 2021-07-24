@@ -9,3 +9,6 @@
 * age -> maior de 15 anos
 * pronoun -> pode ser nulo (abster de responder)
 * description -> se inicia como nula e será pedida depois.
+
+// regras:
+só admins podem criar autores novos, para mandar sugestão de novos autores é necessário um schema de sugestão

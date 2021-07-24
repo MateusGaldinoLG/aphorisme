@@ -26,6 +26,6 @@ export default Vue.extend({
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  background-color: #bbb;
+  background-color: #555;
 }
 </style>

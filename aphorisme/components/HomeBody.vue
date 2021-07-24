@@ -34,6 +34,9 @@
 </template>
 
 <style lang="scss" scoped>
+main{
+  color: white;
+}
 h2{
   margin: 0.75rem 0;
   text-align: center;
@@ -57,7 +60,7 @@ p{
 }
 
 span{
-  color: purple;
+  color: $dark-purple-500;
 }
 
 .buttons{
