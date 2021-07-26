@@ -1,7 +1,7 @@
 # Create author that already died
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
 
 {
     "name": "Friedrich Nietzsche",
@@ -14,7 +14,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
 
 {
     "name": "Sigmund Freud",
@@ -28,7 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
 
 {
     "name": "Slavoj Zizek",
@@ -41,10 +41,40 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MDcxMzcxLCJleHAiOjE2MjcxNTc3NzEsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.t1vsM_QaslY6lLyGYVoRScO4n2tBF4-1soId9m0XHD8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
 
 {
     "name": "Sis",
     "born_at": "1111-11-11"
 }
 
+###
+# Create aphorism with author name
+
+POST http://localhost:3030/aphorisms HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+
+{
+    "text": "We live in a society",
+    "like": 0,
+    "author_name": "Sis"
+}
+
+###
+# Get all authors
+
+GET http://localhost:3030/authors HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+
+###
+# Get all aphorisms of author
+
+GET http://localhost:3030/author/Sis/aphorism HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+
+###
+# Get author details
+
+GET http://localhost:3030/author/Sis HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU

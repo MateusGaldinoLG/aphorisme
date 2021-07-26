@@ -14,9 +14,10 @@ Aphorism frontend
 
 Backend:
 [x] Desenvolver POST de autores novos
-[] Desenvolver POST de aforismos com nome de autor
-[] Desenvolver GET de autores já cadastrados
-[] Desenvolver GET de todos os aforismos de um determinado autor
+[x] Desenvolver POST de aforismos com nome de autor
+[x] Desenvolver GET de autores já cadastrados
+[x] Desenvolver GET de todos os aforismos de um determinado autor
+[x] Desenvolver GET de detalhes do autor
 [] Desenvolver GET de todos os autores e usuários com determinado nome para o SearchBar do frontend
 [] Desenvolver PUT de informações de autores
 [] Desenvolver DELETE de autores
