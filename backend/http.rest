@@ -69,3 +69,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
     "description": "I am a programmer from Brasil",
     "pronoun": "he/him"
 }
+
+###
+# Get all entries with name
+
+GET  http://localhost:3030/details/Friedrich-Nietzsche HTTP/1.1

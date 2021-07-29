@@ -65,7 +65,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 # Get all authors
 
 GET http://localhost:3030/authors HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
 
 ###
 # Get all aphorisms of author
@@ -78,3 +78,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 GET http://localhost:3030/author/Sis HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+
+###
+# Update author details
+
+PUT http://localhost:3030/author HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
+
+{
+    "name": "Sis",
+    "bio": "ficctional author created by Mateus Galdino",
+    "born_at": "1111-11-11"
+}
+
+###
+# DELETE author
+
+DELETE http://localhost:3030/authors/da03c855-fb4e-42b5-adbb-008826ade047 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
