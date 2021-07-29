@@ -19,12 +19,21 @@ export default class Aphorism extends Vue {
   @Prop({ type: String, required: true }) readonly aphorismId!: string;
   @Prop({ type: String, required: true }) readonly userId!: string;
 
-  loggedInUserId = this.$store.getters.loggedInUser.id;
+  loggedInUserId: any;
+
+  created () {
+    if (this.$store.getters.loggedInUser) {
+      this.loggedInUserId = this.$store.getters.loggedInUser.id
+    } else {
+      this.loggedInUserId = null
+    }
+  }
 
   get isDeletable (): boolean {
-    if (this.loggedInUserId === this.userId) {
+    if (this.loggedInUserId !== null && this.loggedInUserId === this.userId) {
       return true
     } else {
+      window.console.log('falsy')
       return false
     }
   }

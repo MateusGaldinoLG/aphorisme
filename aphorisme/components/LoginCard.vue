@@ -83,6 +83,7 @@ export default Vue.extend({
           if (err.response.status !== 404) {
             window.console.log('erro')
             this.isWrong = true
+            this.password = ''
           }
         }
       }
@@ -91,9 +92,6 @@ export default Vue.extend({
         this.$router.push('/')
       }
     },
-    // async logout () {
-    //   await this.$auth.logout()
-    // },
     checkLoginData () {
       if (!this.email.includes('@')) {
         this.falseEmail = true

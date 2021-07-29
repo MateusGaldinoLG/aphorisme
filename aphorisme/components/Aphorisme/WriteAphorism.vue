@@ -1,13 +1,18 @@
 <template>
-  <div class="writeAphorism" >
+  <div class="writeAphorism">
     <form method="POST" @submit.prevent="writeAphorism">
       <h4>Write an aphorism</h4>
       <textarea v-model="aphorism" name="aphorism" placeholder="Enter your aphorism here" />
+      <div>
+        <label>Do you want to assign an author?</label>
+        <input v-model="hasAuthor" type="checkbox">
+        <input v-if="hasAuthor" v-model="authorName" type="text" placeholder="author name here">
+      </div>
       <div id="buttons">
         <button class="cancel" @click="cancel">
           cancel
         </button>
-        <button @click="writeAphorism">
+        <button>
           send
         </button>
       </div>
@@ -21,7 +26,9 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      aphorism: ''
+      aphorism: '',
+      hasAuthor: false,
+      authorName: null
     }
   },
   methods: {
@@ -29,7 +36,8 @@ export default Vue.extend({
       await this.$axios.post('/aphorisms',
         {
           text: this.aphorism,
-          likes: 0
+          likes: 0,
+          author_name: this.authorName
         })
         .then(window.console.log)
         .catch(window.console.log)

@@ -18,12 +18,12 @@ export default Vue.extend({
       wasFound: true
     }
   },
-  async mounted () {
+  async created () {
     // window.console.log(this.$route.params.user)
     const param = this.$route.params.user
     await this.$axios.$get(`/user/${param}`)
       .then((res: object) => {
-        window.console.log(res)
+        // console.log(res)
         this.user = res
       })
       .catch((err: any) => {

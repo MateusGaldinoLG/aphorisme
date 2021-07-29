@@ -95,55 +95,6 @@ export default class Aphorism extends Vue {
       .catch(window.console.log)
   }
 }
-
-// export default Vue.extend({
-//   props: {
-//     aphorism: {
-//       type: Object,
-//       required: true
-//     } as PropOptions<any>,
-//     user: {
-//       type: Object as () => IUser,
-//       required: true
-//     }
-//   },
-//   data () {
-//     return {
-//       thisAphorism: this.aphorism as IAphorism
-//     }
-//   },
-//   computed: {
-//     authorName () {
-//       const aphorism = this.aphorism
-//       const user = this.user
-//       if (aphorism.authorName === null || typeof aphorism.authorName === 'undefined') {
-//         window.console.log(user.username)
-//         return user.username
-//       }
-//       return aphorism.authorName
-//     },
-//     getTime () {
-//       const date = new Date(this.aphorism.created_at)
-//       const hours = date.getHours()
-//       const dateString = date.toString()
-//       if (hours > 23) {
-//         return dateString
-//       } else {
-//         return hours
-//       }
-//     }
-//   },
-//   methods: {
-//     likeAphorism (): void {
-//       const vm = this
-//       this.$axios.put(`/aphorisms/like/${vm.aphorism.id}`)
-//         .then(function (res) {
-//           this.thisAphorism.likes = res.data.likes
-//         })
-//         .catch(window.console.log)
-//     }
-//   }
-// })
 </script>
 
 <style lang="scss" scoped>
