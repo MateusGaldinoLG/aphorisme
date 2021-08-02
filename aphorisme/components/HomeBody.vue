@@ -87,7 +87,7 @@ button{
   margin: 0.75rem;
   padding: 0.5rem;
 }
-@media (max-width: 700px){
+@media (max-width: 900px){
   img{
     display: none;
   }

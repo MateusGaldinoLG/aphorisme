@@ -3,9 +3,9 @@
     <article class="aphorism">
       <div class="aphorism_heading">
         <div class="user">
-          <a href="#">
+          <NuxtLink :to="'/users/'+user.username">
             <span class="aphorism_heading-name">{{ user.name }}</span>
-          </a>
+          </NuxtLink>
           <span class="aphorism_heading-username">{{ user.username }}</span>
         </div>
         <Aphorisme-Dropdown :aphorism-id="aphorism.id" :user-id="user.id" />
@@ -35,6 +35,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+
+function getHoursPassed (DateNow: number, OlderDate: Date) {
+  const diffInMilliSeconds = Math.abs(DateNow - OlderDate.getTime()) / 1000
+  const hours = Math.floor(diffInMilliSeconds / 3600)
+  return hours
+}
 
 interface IAphorism{
     id: string;
@@ -76,9 +82,11 @@ export default class Aphorism extends Vue {
 
   get Time () {
     const date = new Date(this.aphorism.created_at)
+    const accessDate = Date.now()
     const hours = date.getHours()
-    const dateString = date.toString()
-    if (hours > 23) {
+    const hoursPassed = getHoursPassed(accessDate, date)
+    const dateString = date.toString().split(' ').slice(1, 4).join(' ')
+    if (hoursPassed > 23) {
       return dateString
     } else {
       return `${hours}hrs`

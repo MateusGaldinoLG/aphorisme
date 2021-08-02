@@ -38,11 +38,12 @@ Backend:
 --------------
 
 Frontend:  
-[] Criar index de página de autor  
+[x] Criar index de página de autor  
 [x] Criar detalhe de especificar autor no WriteAphorism  
 [x] Criar pesquisa de autor/usuário no componente de Nav  
-[] Criar página dinâmica de aforismo  
-[] Pensar no armazenamento em Vuex dos aforismos do usuário logado  
+[x] Criar página dinâmica de aforismo  
+[#?] Pensar no armazenamento em Vuex dos aforismos do usuário logado  
 [x] Mudar cor de fundo do site para um cinza mais escuro e cor de texto de Home para Branco  
 [x] Criar sistema de reset de senha ao errar o login  
-[] Desenvolver sistema de _aphorism depois de criar a rota de GET no backend  
+[x] Desenvolver sistema de _aphorism depois de criar a rota de GET no backend  
+[ ] Criar condicionais de loading... em outros componentes

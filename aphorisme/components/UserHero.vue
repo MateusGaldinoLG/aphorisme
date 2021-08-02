@@ -45,6 +45,9 @@ export default Vue.extend({
       required: true
     }
   },
+  mounted () {
+    window.console.log(this.user.name)
+  },
   computed: {
     ...mapGetters([
       'isAuthenticated',
