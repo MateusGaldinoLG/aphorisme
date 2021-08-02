@@ -24,7 +24,7 @@ const updateAuthorDetailsController = new UpdateAuthorDetailsController();
 authorRouter.post("/author", ensureAuthenticated, createAuthorController.handle);
 
 authorRouter.get("/authors", ensureAuthenticated, getAllAuthorsController.handle);
-authorRouter.get("/author/:authorname", ensureAuthenticated, getAuthorDetailsController.handle)
+authorRouter.get("/author/:authorname", getAuthorDetailsController.handle)
 authorRouter.get("/author/:authorname/aphorism", ensureAuthenticated, getAphorismByAuthorController.handle)
 
 authorRouter.put('/author', ensureAuthenticated, updateAuthorDetailsController.handle)

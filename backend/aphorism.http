@@ -52,3 +52,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 # Get aphorism details by id
 
 GET http://localhost:3030/aphorism/c6f99845-7cea-431c-8b1f-a7905eb18daf HTTP/1.1
+
+###
+# Get all aphorism details
+
+GET http://localhost:3030/aphorism/c6f99845-7cea-431c-8b1f-a7905eb18daf/details HTTP/1.1
