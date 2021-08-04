@@ -16,8 +16,6 @@ class GetUserByUserNameService{
             throw new Error(`User with name ${username} not found`)
         }
 
-        //console.log(user);
-
         return classToPlain(user);
     }
 

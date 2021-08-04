@@ -16,18 +16,13 @@ export class AddUserDescriptionByIdService{
             id
         })
 
-        //console.log(user)
-
         if(!user){
             throw new Error("User does not exist")
         }
 
         user.description = description;
 
-        //console.log(user)
-
         const results = await userRepository.save(user!);
-        //console.log(results)
 
         return classToPlain(results);
     }

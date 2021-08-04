@@ -8,7 +8,6 @@ class GetUserByUserNameController{
         const getUserByUserNameService = new GetUserByUserNameService();
 
         const userName = req.params.username.replace("-", " ");
-        //console.log(userName)
 
         const user = await getUserByUserNameService.execute(userName);
 

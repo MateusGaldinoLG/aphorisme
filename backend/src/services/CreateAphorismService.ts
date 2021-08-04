@@ -44,15 +44,12 @@ class CreateAphorismService{
         }
 
         if(hasAuthorName){
-            console.log(author_name)
             author = await authorRepository.findOne({
                 name: author_name
             })
             if(author){
                 author_id = author!.id;
-                console.log(author_id)
             }
-            console.log(author)
         }
 
         const aphorism = aphorismRepository.create({

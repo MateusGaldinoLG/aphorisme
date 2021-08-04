@@ -27,8 +27,6 @@ class UpdateAuthorDetailsService{
         author.born_at = born_at;
         author.died_at = died_at!;
 
-        console.log(author);
-
         const results = await authorRepository.save(author);
 
         return results;

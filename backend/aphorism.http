@@ -14,7 +14,7 @@ Content-Type: application/json
 
 POST http://localhost:3030/aphorisms HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Nzg4ODkwLCJleHAiOjE2MjY4NzUyOTAsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.n97xrJsbD95szlJI-c_flt4miP6jEzhXkvQh5ARY0xc
+Authorization: Bearer ...
 
 {
     "text": "Lorem ipsum dolor sit amet",
@@ -28,25 +28,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 GET http://localhost:3030/aphorisms/Mateus-Galdino HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
+Authorization: Bearer ...
 
 ###
 
 GET http://localhost:3030/aphorisms/Mateus Galdino HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2OTczNjI0LCJleHAiOjE2MjcwNjAwMjQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.ujrvWOSWp5nHnaCBIxAr__f6NackoN-mFjMPa-P3uGo
+Authorization: Bearer ...
 
 ###
 # like aphorism
 
 PUT http://localhost:3030/aphorisms/like/883d7157-0083-417c-9d23-67eb439f8589 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2OTczNjI0LCJleHAiOjE2MjcwNjAwMjQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.ujrvWOSWp5nHnaCBIxAr__f6NackoN-mFjMPa-P3uGo
+Authorization: Bearer ...
 
 ###
 # Delete aphorism
 
 DELETE http://localhost:3030/aphorisms/76cd0149-d50c-445f-8547-4a4b253b1958 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI2Nzg4ODkwLCJleHAiOjE2MjY4NzUyOTAsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.n97xrJsbD95szlJI-c_flt4miP6jEzhXkvQh5ARY0xc
+Authorization: Bearer ...
 
 ###
 # Get aphorism details by id

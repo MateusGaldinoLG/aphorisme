@@ -1,7 +1,7 @@
 # Create author that already died
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 {
     "name": "Friedrich Nietzsche",
@@ -14,7 +14,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 {
     "name": "Sigmund Freud",
@@ -28,7 +28,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 {
     "name": "Slavoj Zizek",
@@ -41,7 +41,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 {
     "name": "Sis",
@@ -53,7 +53,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 
 POST http://localhost:3030/aphorisms HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 {
     "text": "We live in a society",
@@ -65,26 +65,26 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 # Get all authors
 
 GET http://localhost:3030/authors HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
+Authorization: Bearer ...
 
 ###
 # Get all aphorisms of author
 
 GET http://localhost:3030/author/Sis/aphorism HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 ###
 # Get author details
 
 GET http://localhost:3030/author/Sis HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3MjU2NDQ0LCJleHAiOjE2MjczNDI4NDQsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.G70GFA9XG9oKDaKTy8PWx97S7k1f5QLcpd7o_DbnUXU
+Authorization: Bearer ...
 
 ###
 # Update author details
 
 PUT http://localhost:3030/author HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
+Authorization: Bearer ...
 
 {
     "name": "Sis",
@@ -96,4 +96,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1c
 # DELETE author
 
 DELETE http://localhost:3030/authors/da03c855-fb4e-42b5-adbb-008826ade047 HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hdGV1czJAdGVzdGUuY29tIiwiaWF0IjoxNjI3NDk1MjQyLCJleHAiOjE2Mjc1ODE2NDIsInN1YiI6ImNjMzU2MzM0LWRlZDktNDQyMi05NDlmLTA2NTZlOTJhYTU4ZCJ9.CeQinNQGS3CELo6ke_fzSurL7GBSpLf_gvgU93PzwqA
+Authorization: Bearer ...

@@ -33,7 +33,6 @@ class CreateAuthorService {
 
         if(!bio){
             let dob = born_at.toString().split(" ").slice(1, 4);
-            //console.log(dob);
             defaultBio = `author ${name} was born in ${dob}`
         } else {
             defaultBio = bio
