@@ -47,3 +47,7 @@ Frontend:
 [x] Criar sistema de reset de senha ao errar o login  
 [x] Desenvolver sistema de _aphorism depois de criar a rota de GET no backend  
 [ ] Criar condicionais de loading... em outros componentes
+[x] Tirar novos prints do site  
+[x] Criar novas variaveis no SCSS e renomear padding/font-size  
+
+[ ] Apagar window.console.log

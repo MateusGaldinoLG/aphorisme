@@ -1,7 +1,13 @@
 # Aphorism
 
 ![home example](/ReadmeImage/AphorismeHome.png)
+![Login example](/ReadmeImage/AphorismeLogin.png)
 ![profile example](/ReadmeImage/AphorismeProfile.png)
+![writing example without author](/ReadmeImage/AphorismeWriting2.png)
+![writing example with author](/ReadmeImage/AphorismeWriting.png)
+![Searching author example](/ReadmeImage/SearchAuthor.png)
+![Searching User example](/ReadmeImage/SearchUser.png)
+![Seeing another userpage example](/ReadmeImage/UserPage.png)
 
 ## Description
 
@@ -14,11 +20,13 @@ As a fullstack project, many technologies were used, namely:
 
 * Front end:
 
-Nuxt - Vue - Bootstrap Vue - sass
+Nuxt - Vue - Bootstrap Vue - scss
 
 * Back end:
 
 Express - Typescript - Typeorm - Postgres
+
+This stack could also me called PEVN (PostgresQL - Express - Vuejs - Node)js, in comparison to the PERN (PostgresQL - Express - Reactjs - Nodejs)
 
 ## How to run
 
@@ -73,12 +81,12 @@ The backend uses PostgresQL and Typeorm, to set up it rightly follow this steps:
 
 ```bash
     # in prompt
-    createdb aphorisme
+    createdb aphorisme -O #owner name
     # or in psql
     CREATE DATABASE aphorisme with OWNER #name here
 ```
 
-3. Run all typeorm migrations with npm cli
+3. Run all typeorm migrations with the npm cli
 
 ```bash
     cd backend
