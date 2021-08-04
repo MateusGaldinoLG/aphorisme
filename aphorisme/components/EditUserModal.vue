@@ -97,7 +97,7 @@ export default Vue.extend({
       display: flex;
       justify-content: space-between;
       button{
-        padding: 0.5rem;
+        padding: $p-2;
         border-radius: 2px;
         box-shadow: none;
         color: white;
@@ -109,8 +109,8 @@ export default Vue.extend({
       }
 
       .cancel{
-        font-size: 1.25rem;
-        padding: 0.25rem;
+        font-size: $fs-large;
+        padding: $p-1;
         border: none;
         background-color: white;
         color: $button-blue;
@@ -122,7 +122,7 @@ export default Vue.extend({
 
 input{
   margin: 0.25rem 0;
-  padding: 0.5rem;
+  padding: $p-2;
   border-radius: 0.25rem;
 }
 
@@ -137,7 +137,7 @@ img{
     margin: 0;
 }
 textarea{
-  padding: 0.5rem;
+  padding: $p-2;
   height: 5rem;
   width: 100%;
   resize: none;

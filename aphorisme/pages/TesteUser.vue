@@ -24,7 +24,6 @@ export default Vue.extend({
   },
   methods: {
     setEditable () {
-      // window.console.log('emitted')
       if (this.editable === false) {
         this.editable = true
       } else { this.editable = false }

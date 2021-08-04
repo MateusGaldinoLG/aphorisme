@@ -54,7 +54,7 @@ export default Vue.extend({
     background-color: white;
     width: 500px;
     margin-bottom: 0.15rem;
-    padding: 1rem;
+    padding: $p-4;
 }
 #buttons{
     display: flex;
@@ -64,7 +64,7 @@ export default Vue.extend({
 button{
     background-color: $button-blue;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: $p-2 $p-4;
     margin: 9px;
     border: none;
     cursor: pointer;
@@ -90,7 +90,7 @@ textarea{
     resize: none;
     width: 100%;
     height: 3rem;
-    padding: .25rem;
+    padding: $p-1;
     border-radius: 0.75rem;
 }
 

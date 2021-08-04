@@ -33,13 +33,11 @@ export default class Aphorism extends Vue {
     if (this.loggedInUserId !== null && this.loggedInUserId === this.userId) {
       return true
     } else {
-      window.console.log('falsy')
       return false
     }
   }
 
   public deleteAphorism (): void {
-    window.console.log(this.aphorismId)
     this.$axios.delete(`/aphorisms/${this.aphorismId}`)
       .then((res: any) => {
         window.console.log(res)

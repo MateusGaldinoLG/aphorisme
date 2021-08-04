@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="search_results">
     <div>
       <div v-if="!haveError">
         <h2>You have searched for {{ name }}</h2>
@@ -69,7 +69,6 @@ export default class SearchResults extends Vue {
 
     getResults () {
       const searchInput = this.searchString.replace(' ', '-')
-      window.console.log(searchInput)
       this.$axios.get(`/details/${searchInput}`)
         .then((res: any) => {
           this.results = res.data
@@ -96,6 +95,9 @@ export default class SearchResults extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.search_results{
+  padding: $p-4;
+}
 h2, h3, .section_title, .not-found{
   color: white;
 }

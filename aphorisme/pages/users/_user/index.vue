@@ -19,11 +19,9 @@ export default Vue.extend({
     }
   },
   async created () {
-    // window.console.log(this.$route.params.user)
     const param = this.$route.params.user
     await this.$axios.$get(`/user/${param}`)
       .then((res: object) => {
-        // console.log(res)
         this.user = res
       })
       .catch((err: any) => {

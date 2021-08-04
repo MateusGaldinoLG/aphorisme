@@ -24,7 +24,6 @@ export default class SearchBar extends Vue {
   searchInput: string = '';
 
   public search () {
-    window.console.log(this.searchInput)
     this.$router.push(`/search/${this.searchInput}`)
   }
 }
@@ -46,8 +45,8 @@ export default class SearchBar extends Vue {
 
     &__input{
         flex-grow: 1;
-        font-size: 1.25rem;
-        padding: 0 0.5rem;
+        font-size: $fs-large;
+        padding: $p-w-2;
         border: 0;
         position: absolute;
         top: 0;
@@ -63,7 +62,7 @@ export default class SearchBar extends Vue {
     }
 
     &__submit{
-        font-size: 1.5rem;
+        font-size: $fs-xl;
         cursor: pointer;
         background: transparent;
         border-radius: 50%;

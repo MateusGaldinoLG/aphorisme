@@ -96,13 +96,6 @@ export default Vue.extend({
           this.isWrong = true
           this.errorMessage = error.response.data.error // change this later
         })
-      // window.console.log({
-      //   username: this.username,
-      //   email: this.email,
-      //   password: this.password,
-      //   age: calculateAge(createDate(this.day, this.month, this.year, this.meses)),
-      //   date: createDate(this.day, this.month, this.year, this.meses)
-      // })
     },
     cancelSignUp () {
       this.$router.push('/')

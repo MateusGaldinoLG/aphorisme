@@ -23,7 +23,6 @@ class UpdateUserDetailsService{
             throw new Error("User does not exist")
         }
 
-        //gambiarra (?)
         user.name = name;
         user.description = description;
         user.pronoun = pronoun;

@@ -44,11 +44,11 @@ h2{
 
 h3{
   margin: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: $fs-xl;
 }
 
 .main__body-brand{
-  font-size: 2.5rem;
+  font-size: $fs-3xl;
 }
 
 .main__body{
@@ -56,7 +56,7 @@ h3{
 }
 
 p{
-  padding: 0.15rem;
+  padding: $p-1-sm;
 }
 
 span{
@@ -69,7 +69,7 @@ span{
 
 button{
   background-color: lightblue;
-  padding: 0.25rem;
+  padding: $p-1;
   margin: 0 0.25rem;
   border-radius: 0.25rem;
   width: 125px;
@@ -85,7 +85,7 @@ button{
 .main{
   display: flex;
   margin: 0.75rem;
-  padding: 0.5rem;
+  padding: $p-1;
 }
 @media (max-width: 900px){
   img{

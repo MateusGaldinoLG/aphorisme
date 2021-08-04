@@ -29,10 +29,6 @@ interface Author{
 export default class AuthorPage extends Vue {
     @Prop({ type: Object, required: true }) readonly author!: Author;
 
-    created () {
-      console.log(this.author)
-    }
-
     get dateOfBirth () {
       const dateOfBirth = new Date(this.author.born_at)
       const dob = dateOfBirth.toString().split(' ').slice(1, 4).join(' ')

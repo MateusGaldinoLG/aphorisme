@@ -20,6 +20,7 @@ export default {
   css: [
   ],
 
+  // for phone testing
   // server: {
   //   host: '0.0.0.0'
   // },
